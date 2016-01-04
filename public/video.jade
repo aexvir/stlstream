@@ -1,0 +1,17 @@
+doctype html
+html( ng-app='StlStream', i18n-locale=i18n.getLocale())
+	head
+		title=__('main.title')
+		link(rel='stylesheet', href='css/fontawesome.css')
+		link(rel='stylesheet', href='css/style.css')
+		script(src='js/jquery.js')
+		//- script(src='js/scripts.js')
+		script(src='js/tweenmax.js')
+	body
+		div(id='container', class='flex')
+			#gallery
+				each video in videos
+					.thumb
+						img(src=video.thumb, alt=video.title)
+						.title #{video.title}
+						.length #{video.length}

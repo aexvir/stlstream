@@ -1,0 +1,181 @@
+@import 'nib'
+@import 'https://fonts.googleapis.com/css?family=Roboto'
+
+maincolor = #3d3d3d
+maincolorlight = #5d5d5d
+accent = #5ab32a
+
+global-reset()
+
+body, html
+	margin 0
+	padding 0
+	background maincolor
+	font-family 'Roboto'
+
+	a
+		text-decoration none !important
+
+.flex
+	display flex
+	flex-direction column
+	justify-content center
+	align-content center
+	align-items center
+
+#selector
+	position fixed
+	top 0
+	left 0
+	height 50px
+	width 100%
+	flex-direction row
+
+	.left
+		border-radius 5px 0px 0px 5px
+
+	.right
+		border-radius 0px 5px 5px 0px
+
+	.left:hover, .right:hover
+		background accent
+
+	a
+		background maincolorlight
+		font-size 20px
+		height 40px
+		width 150px
+		text-align center
+		line-height 40px
+		color #fff
+		text-decoration none
+		/*box-shadow 0px 0px 15px 0px #000*/
+			
+#logo{
+	height auto
+	width auto
+	max-height 40px
+	max-width 95%
+	margin-left 5px
+}
+
+/* Main view */
+
+#container
+	height calc(100vh - 50px)
+	margin-top 50px
+	width 100%
+	//justify-content flex-start
+	/*border-radius 5px 0px 0px 5px*/
+
+.pillbtn
+	display block
+	height 40px
+	width 250px
+	line-height 40px
+	text-align center
+	color #fff
+	text-decoration none
+	background maincolor
+	font-size 20px
+	border-radius 20px
+	margin-right 5px
+
+.group
+	flex-direction row
+
+#gallery
+	height 100%
+	width 100%
+	margin-top 25px
+	display flex
+	flex-flow row wrap
+	justify-content center
+
+.thumb
+	height 250px
+	width 400px
+	margin 15px
+
+	img
+		max-height 100%
+		max-width 100%
+		box-shadow 0px 0px 25px 0px #000
+		margin-bottom 5px
+
+	.bottom
+		width 100%
+		height 20px
+		display flex
+		flex-direction row
+		color #fff
+		justify-content space-between
+		align-items center
+		align-content center
+
+		.title
+			font-size 20px
+
+/* Video view*/
+
+#menubar
+	height 50px
+	width 100%
+	background accent
+	position fixed
+	top 0
+	left 0
+	flex-direction row
+	justify-content space-between
+
+#videoplayer
+	height 405px
+	width 720px
+
+	.video-js
+		margin-top 25px
+		height 100%
+		width 100%
+		box-shadow 0px 0px 25px 0px #000
+
+.vjs-big-play-button
+	display: none !important
+
+.bottominfo
+	width 720px
+	display flex
+	flex-direction row
+	color #fff
+	justify-content space-between
+	align-items center
+	align-content center
+	margin-top 50px
+
+	.vidinfo
+		width 75%
+		display flex
+		flex-direction column
+
+		.vidtitle
+			height 25px
+			font-weight bold
+			font-size 25px
+			color #fff
+
+		.viduploader
+			font-size 15px
+			color #bbb
+		
+	.visitorcount
+		height 20px
+		font-size 20px
+
+#liveplayer
+	margin-top 25px
+	box-shadow 0px 0px 25px 0px #000
+
+.error{
+	font-weight bold
+	font-size 25px
+	color #fff
+}

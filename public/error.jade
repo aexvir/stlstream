@@ -1,0 +1,15 @@
+doctype html
+html( ng-app='StlStream', i18n-locale=i18n.getLocale())
+	head
+		title=__('main.title')
+		link(rel='stylesheet', href='css/fontawesome.css')
+		link(rel='stylesheet', href='css/style.css')
+	body
+		#menubar.flex
+			a(href="/")
+				img(src="img/logo.png", alt="StlStream logo", id="logo")
+			.group.flex
+				a(href="live",class='pillbtn')=__('button.golive')
+				a(href="/",class='pillbtn') Galería
+		#container.flex
+			.error Oops! El video al que intentas acceder no está disponible

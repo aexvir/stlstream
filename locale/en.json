@@ -1,0 +1,15 @@
+{
+	"main": {
+		"title": "StlStream"
+	},
+	"live": {
+		"title": "Live streaming"
+	},
+	"selector": {
+		"music": "Music",
+		"video": "Video"
+	},
+	"button": {
+		"golive": "Go Live"
+	}
+}
